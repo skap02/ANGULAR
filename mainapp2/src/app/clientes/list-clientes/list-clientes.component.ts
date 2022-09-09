@@ -1,8 +1,11 @@
+import { NewClientesComponent } from './../new-clientes/new-clientes.component';
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 
 
 import { ClientesService } from '../clientes.service';
+
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-list-clientes',
@@ -18,7 +21,14 @@ export class ListClientesComponent implements OnInit {
 
   clientes: any[] = [];
 
-  constructor(private service:ClientesService) { }
+  constructor(private service:ClientesService,public dialog: MatDialog) { }
+
+  openNewCliente():void
+  {
+    const dialogRef = this.dialog.open(NewClientesComponent, {
+      width: '30%'
+      });
+  }
 
   /*
   addCliente()

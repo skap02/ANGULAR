@@ -11,8 +11,13 @@ import { ListClientesComponent } from './clientes/list-clientes/list-clientes.co
 import { NewClientesComponent } from './clientes/new-clientes/new-clientes.component';
 
 import { DataTablesModule } from 'angular-datatables';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule }  from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,10 +33,19 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     DataTablesModule,
-    FormsModule,
     HttpClientModule,
-    ProductosModule
+    ProductosModule,
+    BrowserAnimationsModule,
+
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSelectModule
+
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
